@@ -17,7 +17,7 @@ This is the personal portfolio website of **Divya Tariwala**, showcasing skills,
 
 ## Demo
 
-You can view the live portfolio [here](#) *(replace `#` with live link if deployed)*.
+You can view the live portfolio [here](https://divyatariwala.github.io/portfolio-website/).
 
 ---
 
