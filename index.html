@@ -67,7 +67,7 @@
         </div>
     </section>
 
-    <section id="about">
+    <section id="about" class="bg_card">
         <div class="container">
             <div class="section_about">
                 <h2>About <span>Me</span></h2>
@@ -173,7 +173,7 @@
         </div>
     </section>
 
-    <section id="projects">
+    <section id="projects" class="bg_card">
         <div class="container">
             <div class="section_projects">
                 <h2>Featured <span>Projects</span></h2>
@@ -329,7 +329,7 @@
         </div>
     </section>
 
-    <section id="education">
+    <section id="education" class="bg_card">
         <div class="container">
             <div class="section_education">
                 <h2>Education & <span>Certifications</span></h2>
@@ -393,55 +393,70 @@
         </div>
     </section>
 
-     <section id="contact" class="bg_colour">
+    <section id="contact" class="bg_colour">
         <div class="container">
             <div class="section_contact">
                 <h2>Get In <span>Touch</span></h2>
                 <p>Let's work together</p>
-            </div>
-            <div class="contact_details">
-                <div class="row">
-                    <div class="col-md-6">
-                        <p>I'm currently open to new opportunities and collaborations. Feel free to reach out!</p>
-                        <ul>
-                            <li>
+                <div class="contact_details">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>I'm currently open to new opportunities and collaborations. Feel free to reach out!</p>
+                            <div class="contact_icon_box">
                                 <a href="mailto:tariwaladivya@gmail.com">
-                                    <div class="contact_icon_box">
-                                        <i class="fa-solid fa-envelope"></i>
-                                        <span>tariwaladivya@gmail.com</span>
-                                    </div>
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <span>tariwaladivya@gmail.com</span>
                                 </a>
-                            </li>
-                            <li>
+                            </div>
+                            <div class="contact_icon_box mt-3">
                                 <a href="tel:+447340817704">
-                                    <div class="contact_icon_box">
-                                        <i class="fa-solid fa-phone"></i>
-                                        <span>+44 7340817704</span>
-                                    </div>
+                                    <i class="fa-solid fa-phone"></i>
+                                    <span>+44 7340 817704</span>
                                 </a>
-                            </li>
-                            <li>
-                                <a href="https://www.linkedin.com/in/divya-tariwala-990b35282">
-                                    <div class="contact_icon_box">
-                                        <i class="fa-solid fa-envelope"></i>
-                                        <span>LinkedIn</span>
-                                    </div>
+                            </div>
+                            <div class="contact_icon_box mt-3">
+                                <a href="www.linkedin.com/in/divya-tariwala-990b35282" target="_blank">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                    <span>LinkedIn</span>
                                 </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <div class="contact_icon_box">
-                                        <i class="fa-solid fa-envelope"></i>
-                                        <span>GitHub</span>
-                                    </div>
+                            </div>
+                            <div class="contact_icon_box mt-3">
+                                <a href="https://github.com/Divyatariwala" target="_blank">
+                                    <i class="fa-brands fa-github"></i>
+                                    <span>GitHub</span>
                                 </a>
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <form action="mailto:tariwaladivya@gmail.com" method="post" class="contact_form">
+                                <div class="form_group">
+                                    <input type="text" id="name" name="name" placeholder="Your Name">
+                                </div>
+                                <div class="form_group">
+                                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                                </div>
+                                <div class="form_group">
+                                    <textarea id="message" name="message" rows="5" placeholder="Your Message"
+                                        required></textarea>
+                                </div>
+                                <a href="" class="btn-primary"><i class="fa-regular fa-paper-plane ml-0 "></i> Send
+                                    Message</a>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <footer>
+        <div class="mx-auto px-4 text-center">
+            <p class="m-0">© 2026 Divya Tariwala. All rights reserved.</p>
+    </footer>
+
+    <button id="scrollTopBtn">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
     <script src="script.js"></script>
 </body>

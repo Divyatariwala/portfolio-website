@@ -59,7 +59,7 @@ margin-left:2px;
     transition: 0.3s;
 }
 .nav-icons i:hover{
-    color: hsl(220 25% 10%);
+    color: #131720;
 }
 .nav-links a::after {
     content: '';
@@ -70,6 +70,9 @@ margin-left:2px;
     left: 0;
     bottom: -5px;
     transition: 0.3s;
+}
+.nav-links a:hover {
+    color: #131720;
 }
 .nav-links a:hover::after {
     width: 100%;
@@ -188,6 +191,7 @@ margin-left:2px;
     font-size: 14px;
     font-weight: 600;
     line-height: 1.7;
+    transition: 0.3s;
 }
 .btn-primary i {
     margin-left: 8px;
@@ -197,6 +201,7 @@ margin-left:2px;
     filter: brightness(1.1);
     transform: translateY(-1px);
     box-shadow: 0 4px 20px hsl(16deg 85% 58% / 30%);
+    background-color: #EF6939;
 }
 
 
@@ -260,6 +265,10 @@ margin-left:2px;
 /* Skills Section */
 .bg_colour {
     background: #e5e7eb57;
+    border-top: 1px solid #dcdfe5;
+}
+.bg_card{
+    border-top: 1px solid #dcdfe5;
 }
 .skills_content .grid, .projects_content .grid {
     display: grid;
@@ -275,7 +284,7 @@ margin-left:2px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: 0.3s;
 }
-.skill_card:hover, .project_card:hover, .edu_certi_card:hover {
+.skill_card:hover, .project_card:hover, .edu_certi_card:hover, .dark .skill_card:hover, .dark .project_card:hover, .dark .edu_certi_card:hover {
     border-color: #ef69394d;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -287,7 +296,7 @@ margin-left:2px;
 }
 .icons_box{
     display: flex;
-    gap: 3px;
+    gap: 1px;
     flex-wrap: wrap;
     background-color: #EF69391A;
     color: #EF6939;
@@ -396,7 +405,7 @@ margin-left:2px;
     margin-bottom: 4px;
 }
 .job_place span{
-    font-size: 12px;
+    font-size: 14px;
     color: #6A7181;
     margin-bottom: 16px;
 }
@@ -440,26 +449,194 @@ margin-left:2px;
     color: #6A7181;
 }
 
+/* Contact Section */
+.contact_details p{
+    font-size: 16px;
+    color: #131720;
+    margin-bottom: 24px;
+}
+.contact_icon_box{
+    width: 40px;
+    height: 40px;
+    background-color:#e8eaee;
+    color: #6A7181;
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    transition: 0.3s ease;
+}
+.contact_icon_box i {
+    font-size: 17px;
+}
+.contact_icon_box a{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    text-decoration: none;
+    color: #6A7181;
+    transition: 0.3s;
+}
+.contact_icon_box:hover{
+    background-color: #ef69391a;
+}
+.contact_icon_box:hover a{
+    color: #ef6939;
+}
+.contact_icon_box span{
+    font-size: 14px;
+    white-space: nowrap;
+}
+.form_group input, .form_group textarea {
+    width: 100%;
+    padding: 12px 16px 12px 16px;
+    border: 1px solid #dcdfe5;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: #131720;
+}
+.section_contact .btn-primary i{
+    margin-left: 0px;
+    margin-right: 8px;    
+}
 
-/* DARK MODE */
+/* Footer */
+footer {
+    background-color: #e5e7eb57;
+    border-top: 1px solid #dcdfe5;
+    padding: 32px 0px;
+}
+footer p {
+    color: #6A7181;
+    font-size: 14px;
+}
+
+/* Scroll to top button */
+#scrollTopBtn{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: #ef6939;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+#scrollTopBtn:hover{
+    transform: translateY(-3px);
+    background: #e55d2f;
+    filter: brightness(1.1);
+}
+
+
+
+/* Dark Mode */
+.dark{
+    background:#121212;
+    color:#E2E4E9;
+}
+.dark .logo-d{
+    color:#E2E4E9;
+}
+.dark .nav-icons i:hover{
+    color: #e2e4e9;
+}
+.dark .nav-links a:hover {
+    color: #E2E4E9;
+}
+.dark .navbar{
+    background:#1e1e1e;
+}
 .dark .navbar.scrolled{
-    background: #1e1e1e;
+    background:#1e1e1e;
 }
-.dark {
-    background: #121212;
-    color: white;
+.dark .nav-links a{
+    color:#818898;
 }
-.dark .navbar {
-    background: #1e1e1e;
+.dark .hero{
+    background:#121212;
 }
-.dark .nav-links a {
-    color: white;
+.dark .btn-outline{
+    color: #E2E4E9;
+    border: 1px solid #2b303b;
 }
-.dark .hero {
-    background: #121212;
+.dark .btn-outline:hover{
+    color: #EF6939;
+    border-color: #EF6939;
 }
-.dark .hero-text p {
-    color: #ccc;
+.dark .section_about p, .dark .section_skills p , .dark .section_projects p, .dark .section_experience p, .dark .section_education p {
+    color: #818898;
+}
+.dark .skill_card,
+.dark .project_card,
+.dark .edu_certi_card{
+    background:#181d25;
+    border-color:#2b303b;
+}
+.dark .skill_card span,
+.dark .tech_stack span,
+.dark .edu_certi_tags span{
+    background:#272C35;
+    color:#E2E4E9;
+}
+.dark .bg_card{
+    background-color: #181d25;
+    border-color: #2b303b;
+}
+.dark .bg_colour{
+    background:#181818;
+    border-color:#2a2a2a;
+}
+.dark .about_content span {
+    color: #E2E4E9;
+}
+.dark .about_content p {
+    color: #E2E4E9CC;
+}
+.dark .skill_card h3, .dark .project_title h3, .dark .job_title h3, .dark .edu_certi_card h3, .dark .certi_title p {
+    color:#E2E4E9;
+}
+.dark .job_place p{
+    color: #EF6939;
+}
+.dark .job_place span{
+    color: #818898;
+}
+.dark .job_description li{
+    color: #E2E4E9CC;
+}
+.dark .contact_details p{
+    color: #E2E4E9CC;
+}
+.dark .contact_icon_box{
+    background-color:#272C35;
+    color: #E2E4E9;
+}
+.dark .contact_icon_box span{
+    color: #818898;
+}
+.dark input,
+.dark textarea{
+    background:#181D25;
+    border-color:#2b303b;
+    color:#e2e4e9;
+}
+.dark footer {
+    background-color: #181818;
+    border-color: #2a2a2a
+}
+.dark footer p{
+    color:#818898;
 }
 
 
