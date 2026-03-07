@@ -1,33 +1,50 @@
-# Portfolio Website
+# Divya Tariwala Portfolio
 
-Personal portfolio for Divya Tariwala demonstrating skills, projects, experience and certifications.
+This is the personal portfolio website of **Divya Tariwala**, showcasing skills, projects, experience, and contact information. The website is built using **HTML, CSS, and JavaScript**, featuring a responsive design and smooth user interactions.
+
+---
+
+## Table of Contents
+
+- [Demo](#demo)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Project Structure](#project-structure)
+- [Usage](#usage)
+- [Contact](#contact)
+
+---
+
+## Demo
+
+You can view the live portfolio [here](#) *(replace `#` with live link if deployed)*.
+
+---
 
 ## Features
 
-- Responsive single-page layout using HTML, CSS, JavaScript and Bootstrap
-- Hero section with typed subtitle, call‑to‑action buttons and decorative SVG wave
-- About section with profile image and personal statement
-- Skills section with animated progress bars
-- Projects showcase with hover overlays and reveal animations
-- Testimonials carousel
-- Timeline-style experience section
-- Education and certifications sections
-- Contact form with validation
-- Smooth scroll navigation with fixed navbar and scrollspy
-- Dark/light theme toggle with persistence
-- Back-to-top button and preloader
+- **Responsive Design:** Optimized for desktop, tablet, and mobile devices.  
+- **Interactive Navigation:** Sticky navbar with hover effects and mobile menu toggle.  
+- **Hero Section:** Eye-catching introduction with call-to-action buttons.  
+- **About Section:** Personal summary highlighting skills and interests.  
+- **Skills Section:** Categorized technical skills with visual tags and icons.  
+- **Projects Section:** Featured projects with descriptions, tech stack, and hover effects.  
+- **Experience & Education:** Work history, certifications, and academic journey.  
+- **Contact Form:** Validated form with email submission using `mailto` and inline error messages.  
+- **Dark Mode Support:** Switch between light and dark themes for better accessibility.  
+- **Scroll-to-Top Button:** Smooth scrolling for easier navigation.
 
-## Deployment
+---
 
-1. Place `index.html`, `style.css`, `script.js`, and assets (e.g., `resume.pdf`, images) in a repository.
-2. Host on a static site provider (GitHub Pages, Netlify, Vercel, etc.).
-3. Optionally update links in the navbar or contact section.
+## Technologies Used
 
-Live demo: *replace with your live URL once deployed*.
+- **HTML5** - Markup for website structure  
+- **CSS3** - Styling with responsive layouts and animations  
+- **JavaScript** - DOM manipulation, form validation, and interactive features  
+- **Font Awesome** - Icons for navigation, skills, and contact  
+- **Google Fonts** - Typography (`Inter` and `Space Grotesk`)  
+- **Bootstrap 5** - Grid system and basic styling utilities  
 
-## Contact
+---
 
-Email: tariwaladivya@gmail.com
-LinkedIn: https://tinyurl.com/3y5zb4zm
-GitHub: https://tinyurl.com/3vrbwkww
-Phone: +44 7340817704
+## Project Structure

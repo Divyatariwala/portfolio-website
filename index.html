@@ -10,7 +10,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
@@ -415,7 +415,7 @@
                                 </a>
                             </div>
                             <div class="contact_icon_box mt-3">
-                                <a href="www.linkedin.com/in/divya-tariwala-990b35282" target="_blank">
+                                <a href="https://www.linkedin.com/in/divya-tariwala-990b35282" target="_blank">
                                     <i class="fa-brands fa-linkedin-in"></i>
                                     <span>LinkedIn</span>
                                 </a>
@@ -431,15 +431,18 @@
                             <form action="mailto:tariwaladivya@gmail.com" method="post" class="contact_form">
                                 <div class="form_group">
                                     <input type="text" id="name" name="name" placeholder="Your Name">
+                                    <span class="error-msg" id="nameError"></span>
                                 </div>
                                 <div class="form_group">
                                     <input type="email" id="email" name="email" placeholder="Your Email" required>
+                                    <span class="error-msg" id="emailError"></span>
                                 </div>
                                 <div class="form_group">
                                     <textarea id="message" name="message" rows="5" placeholder="Your Message"
                                         required></textarea>
+                                    <span class="error-msg" id="messageError"></span>
                                 </div>
-                                <a href="" class="btn-primary"><i class="fa-regular fa-paper-plane ml-0 "></i> Send
+                                <a href="#" class="btn-primary" id="sendMsg"><i class="fa-regular fa-paper-plane ml-0 "></i> Send
                                     Message</a>
                             </form>
                         </div>
@@ -460,9 +463,7 @@
 
     <script src="script.js"></script>
 </body>
-<!-- finish the 2 sections
-add scroll to top button 
-add dark and light mode toggle functionality
+<!-- 
 and make responsive for mobile devices -->
 
 </html>
