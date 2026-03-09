@@ -10,9 +10,9 @@ const scrollBtn = document.getElementById("scrollTopBtn");
 window.addEventListener("scroll", function () {
 
     if (window.scrollY > 300) {
-        scrollBtn.style.display = "flex";
+        scrollBtn.classList.add("show");
     } else {
-        scrollBtn.style.display = "none";
+        scrollBtn.classList.remove("show");
     }
 
 });
@@ -120,3 +120,35 @@ sendMsg.addEventListener("click", function (e) {
         window.location.href = mailtoLink;
     }
 });
+
+// Animate sections when they come into view
+const sections = document.querySelectorAll("section");
+
+function animateOnScroll() {
+    const triggerBottom = window.innerHeight * 0.85;
+
+    sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+
+        if (sectionTop < triggerBottom) {
+            section.classList.add("in-view");
+        }
+    });
+}
+
+window.addEventListener("scroll", animateOnScroll);
+window.addEventListener("load", animateOnScroll);
+
+// Typing effect for hero subtitle
+const text = "Junior Software Engineer | Full-Stack Web Developer";
+let index = 0;
+
+function typeEffect() {
+    if (index < text.length) {
+        document.getElementById("typingText").textContent += text.charAt(index);
+        index++;
+        setTimeout(typeEffect, 40);
+    }
+}
+
+window.addEventListener("load", typeEffect);

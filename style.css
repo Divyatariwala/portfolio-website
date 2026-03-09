@@ -147,6 +147,7 @@
     font-weight: 500;
     text-align: center;
     margin-bottom: 16px;
+    animation: heroReveal 0.8s ease forwards;
 }
 
 .hero-container {
@@ -166,19 +167,35 @@
     font-family: 'Space Grotesk', sans-serif;
     font-size: 72px;
     margin-bottom: 24px;
+    opacity: 0;
+    animation: heroReveal 0.9s ease forwards;
+    animation-delay: 0.3s;
 }
 
 .hero-text span {
     color: #EF6939;
     font-weight: 700;
     opacity: 0.9;
+    animation: gradientMove 3s linear infinite;
 }
 
-.hero-text .p1 {
+@keyframes gradientMove {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 200%;
+    }
+}
+
+.hero-text .p1 span {
     font-size: 20px;
     margin-bottom: 16px;
     color: #6A7181;
     font-weight: 400;
+    opacity: 0;
+    animation: heroReveal 0.9s ease forwards;
+    animation-delay: 0.6s;
 }
 
 .hero-text p {
@@ -186,6 +203,19 @@
     color: #6A7181;
     margin: 0px 75px 40px 75px;
     font-size: 16px;
+    opacity: 0;
+    animation: heroReveal 0.9s ease forwards;
+    animation-delay: 0.9s;
+}
+@keyframes heroReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
@@ -194,6 +224,9 @@
     display: flex;
     gap: 15px;
     justify-content: center;
+    opacity: 0;
+    animation: heroReveal 0.9s ease forwards;
+    animation-delay: 1.2s;
 }
 
 
@@ -280,6 +313,33 @@
     font-size: 36px;
     margin-bottom: 8px;
     font-weight: 700;
+    position: relative;
+}
+
+.section_about h2::after,
+.section_skills h2::after,
+.section_projects h2::after,
+.section_experience h2::after,
+.section_education h2::after,
+.section_contact h2::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: #EF6939;
+    position: absolute;
+    left: 2px;
+    bottom: 0px;
+    border-radius: 5px;
+    animation: lineGrow 1s ease forwards;
+}
+
+@keyframes lineGrow {
+    from {
+        width: 0;
+    }
+    to {
+        width: 60px;
+    }
 }
 
 .section_about h2 span,
@@ -347,6 +407,19 @@
 .dark .edu_certi_card:hover {
     border-color: #ef69394d;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.skill_card,
+.project_card,
+.edu_certi_card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.skill_card:hover,
+.project_card:hover,
+.edu_certi_card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
 }
 
 .skill_header,
@@ -582,6 +655,7 @@
 .contact_icon_box span {
     font-size: 14px;
     white-space: nowrap;
+    transition: 0.3s;
 }
 
 .form_group input,
@@ -624,17 +698,58 @@ footer p {
     color: white;
     font-size: 16px;
     cursor: pointer;
-    display: none;
+
+    display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: 0.3s;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+
+    transition: opacity 0.3s ease, transform 0.3s ease;
     z-index: 1000;
 }
+
+/* visible state */
+#scrollTopBtn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
 #scrollTopBtn:hover {
     transform: translateY(-3px);
     background: #e55d2f;
-    filter: brightness(1.1);
+}
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(239,105,57,0.5);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(239,105,57,0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(239,105,57,0);
+    }
+}
+/* Floating animation for hero circles */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-25px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+.hero-circle-left {
+    animation: float 7s ease-in-out infinite;
+}
+.hero-circle-right {
+    animation: float 9s ease-in-out infinite;
 }
 
 /* Error messages for contact form */
@@ -764,6 +879,10 @@ footer p {
     color: #818898;
 }
 
+.dark .contact_icon_box:hover a ,.dark .contact_icon_box:hover span{
+    color: #ef6939;
+}
+
 .dark input,
 .dark textarea {
     background: #181D25;
@@ -803,9 +922,29 @@ TABLET DEVICES
     .hero-text p {
         margin: 0 20px 40px 20px;
     }
-
 }
 
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+section.in-view {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeInUp 0.8s forwards;
+}
 
 /* =========================
 MOBILE DEVICES
