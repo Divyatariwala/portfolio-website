@@ -612,6 +612,19 @@
     color: #6A7181;
 }
 
+/* Certificate links */
+.certificate_link {
+    color: #6393ff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.certificate_link:hover {
+    color: #4a44c7;
+    text-decoration: underline;
+}
+
 /* Contact Section */
 .contact_details p {
     font-size: 16px;

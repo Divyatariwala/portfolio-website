@@ -152,3 +152,5 @@ function typeEffect() {
 }
 
 window.addEventListener("load", typeEffect);
+
+
